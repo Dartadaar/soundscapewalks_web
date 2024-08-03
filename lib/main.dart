@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:soundscapewalks/pages/home_page.dart';
 
 import 'constants/colors.dart';
+import 'pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
