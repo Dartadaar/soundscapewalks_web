@@ -1,0 +1,1 @@
+const double standardPadding = 20;

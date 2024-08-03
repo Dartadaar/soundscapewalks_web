@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:soundscapewalks/constants/colors.dart';
 import 'package:soundscapewalks/constants/nav_items.dart';
+import 'package:soundscapewalks/constants/padding.dart';
 import 'package:soundscapewalks/constants/size.dart';
 import 'package:soundscapewalks/widgets/drawer_mobile.dart';
 import 'package:soundscapewalks/widgets/header_desktop.dart';
@@ -32,14 +33,10 @@ class _HomepageState extends State<Homepage> {
                     width: double.maxFinite,
                     child: Stack(
                       children: [
-                        if (constraints.maxWidth > kMinDesktopWidth)
-                          const HeaderDesktop()
-                        else
-                        HeaderMobile(
-                          onMenuTap: () {
-                            scaffoldKey.currentState?.openEndDrawer();
-                          },
-                        ),
+                        Padding(
+                          padding: EdgeInsets.all(standardPadding),
+                          child: constraints.maxWidth > kMinDesktopWidth ? HeaderDesktop() : HeaderMobile(onMenuTap: (){ scaffoldKey.currentState?.openEndDrawer();})
+                        )
                       ],
                     )),
                 //
