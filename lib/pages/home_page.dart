@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:soundscapewalks/constants/colors.dart';
+import 'package:soundscapewalks/constants/fontsize.dart';
 import 'package:soundscapewalks/constants/padding.dart';
 import 'package:soundscapewalks/constants/size.dart';
 import 'package:soundscapewalks/widgets/drawer_mobile.dart';
@@ -37,10 +38,20 @@ class _HomepageState extends State<Homepage> {
                         Padding(
                           padding: EdgeInsets.all(standardPadding),
                           child: constraints.maxWidth > kMinDesktopWidth ? HeaderDesktop() : HeaderMobile(onMenuTap: (){ scaffoldKey.currentState?.openEndDrawer();})
-                        )
+                        ),
+                        Center(
+                          child: Text('SOUNDSCAPEWALKS',
+                              style: TextStyle(
+                                  fontSize: 70, fontWeight: FontWeight.w200)))
                       ],
                     )),
-                //
+                //description
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(70.0),
+                    child: Text('"Soundscapewalks" to utwór stworzony przez Patrycję Kołodziejską, Włodzimierza Żukowskiego oraz Bartosza Gardzińskiego, zakładający współpracę studentów z Wydziału Kompozycji i Teorii Muzyki oraz Wydziału Reżyserii Dźwięku. Głównym założeniem jest głęboka eksploracja dźwiękowej tożsamości Warszawy, zagłębienie się w akustyczny materiał genetyczny miasta, który buduje rzeczywistość wokół mieszkańców poprzez uchwycenie dźwięków tła, pozornie niezauważalnych, a które faktycznie determinują przestrzeń, będącą w ciągłej koegzystencji z dwoma milionami ludzi.', style: TextStyle(fontSize: standardfontsize)),
+                  ),
+                )
               ],
             ));
       }

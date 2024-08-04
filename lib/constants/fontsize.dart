@@ -1,0 +1,1 @@
+const double standardfontsize = 18;

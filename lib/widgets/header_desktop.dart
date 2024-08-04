@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soundscapewalks/constants/fontsize.dart';
 
 import '../constants/colors.dart';
 import '../constants/nav_items.dart';
@@ -11,18 +12,21 @@ class HeaderDesktop extends StatelessWidget {
     return Row(
       children: [
         for (int i = 0; i < navTitles.length; i++)
-          TextButton(
-              onPressed: () {},
-              child: Text(
-                navTitles[i],
-                style: const TextStyle(color: CustomColor.whitePrimary),
-              )),
-        Spacer(),
+          Padding(
+            padding: const EdgeInsets.only(right: 50),
+            child: TextButton(
+                onPressed: () {},
+                child: Text(
+                  navTitles[i],
+                  style: const TextStyle(color: CustomColor.whitePrimary, fontSize: standardfontsize),
+                )),
+          ),
+        const Spacer(),
         TextButton(
             onPressed: () {},
-            child: Text(
+            child: const Text(
               'PL',
-              style: TextStyle(color: CustomColor.redPrimary),
+              style: TextStyle(color: CustomColor.redPrimary, fontSize: standardfontsize),
             ))
       ],
     );
