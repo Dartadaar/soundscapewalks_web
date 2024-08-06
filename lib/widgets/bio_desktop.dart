@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 import '../constants/fontsize.dart';
 import '../constants/text_en.dart';
+import 'hover_image.dart';
 
 class BioDesktop extends StatelessWidget {
   const BioDesktop({
@@ -36,14 +37,10 @@ class BioDesktop extends StatelessWidget {
                     )
                   ],
                 ),
-                Container(
-                  width: double.maxFinite,
+                HoverImage(
+                  imagePath: 'assets/images/Pati3d.png',
                   height: 500,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/Pati3d.png'),
-                          fit: BoxFit.contain)),
-                )
+                ),
               ]),
             ),
           ),
@@ -61,35 +58,32 @@ class BioDesktop extends StatelessWidget {
             ),
           ),
           Flexible(
-              flex: 49,
-              child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 80.0),
-                child: Stack(children: [
-                  Column(
-                    children: [
-                      Text(
-                        'Włodzimierz Żukowski',
-                        style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            fontSize: standardfontsize),
-                      ),
-                      SizedBox(height: 15),
-                      Text(
-                        TextEn.wlodekBio,
-                        style: TextStyle(fontSize: standardfontsize),
-                      )
-                    ],
-                  ),
-                  Container(
-                    width: double.maxFinite,
-                    height: 500,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage('assets/images/Wlodek3d.png'),
-                            fit: BoxFit.contain)),
-                  )
-                ]),
-              ))
+            flex: 49,
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 80.0),
+              child: Stack(children: [
+                Column(
+                  children: [
+                    Text(
+                      'Włodzimierz Żukowski',
+                      style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          fontSize: standardfontsize),
+                    ),
+                    SizedBox(height: 15),
+                    Text(
+                      TextEn.wlodekBio,
+                      style: TextStyle(fontSize: standardfontsize),
+                    )
+                  ],
+                ),
+                HoverImage(
+                  imagePath: 'assets/images/Wlodek3d.png',
+                  height: 500,
+                ),
+              ]),
+            ),
+          ),
         ],
       ),
     );
