@@ -19,23 +19,32 @@ class BioDesktop extends StatelessWidget {
           Flexible(
             flex: 49,
             child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 40.0, horizontal: 80.0),
-              child: Column(
-                children: [
-                  Text(
-                    'Patrycja Kołodziejska',
-                    style: TextStyle(
-                        decoration: TextDecoration.underline,
-                        fontSize: standardfontsize),
-                  ),
-                  SizedBox(height: 15),
-                  Text(
-                    TextEn.patrycjaBio,
-                    style: TextStyle(fontSize: standardfontsize),
-                  )
-                ],
-              ),
+              padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 80.0),
+              child: Stack(children: [
+                Column(
+                  children: [
+                    Text(
+                      'Patrycja Kołodziejska',
+                      style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          fontSize: standardfontsize),
+                    ),
+                    SizedBox(height: 15),
+                    Text(
+                      TextEn.patrycjaBio,
+                      style: TextStyle(fontSize: standardfontsize),
+                    )
+                  ],
+                ),
+                Container(
+                  width: double.maxFinite,
+                  height: 500,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/images/Pati3d.png'),
+                          fit: BoxFit.contain)),
+                )
+              ]),
             ),
           ),
           Flexible(
@@ -54,23 +63,32 @@ class BioDesktop extends StatelessWidget {
           Flexible(
               flex: 49,
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 40.0, horizontal: 80.0),
-                child: Column(
-                  children: [
-                    Text(
-                      'Włodzimierz Żukowski',
-                      style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          fontSize: standardfontsize),
-                    ),
-                    SizedBox(height: 15),
-                    Text(
-                      TextEn.wlodekBio,
-                      style: TextStyle(fontSize: standardfontsize),
-                    )
-                  ],
-                ),
+                padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 80.0),
+                child: Stack(children: [
+                  Column(
+                    children: [
+                      Text(
+                        'Włodzimierz Żukowski',
+                        style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            fontSize: standardfontsize),
+                      ),
+                      SizedBox(height: 15),
+                      Text(
+                        TextEn.wlodekBio,
+                        style: TextStyle(fontSize: standardfontsize),
+                      )
+                    ],
+                  ),
+                  Container(
+                    width: double.maxFinite,
+                    height: 500,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/Wlodek3d.png'),
+                            fit: BoxFit.contain)),
+                  )
+                ]),
               ))
         ],
       ),
