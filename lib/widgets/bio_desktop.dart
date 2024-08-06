@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soundscapewalks/widgets/bio_builder.dart';
 
 import '../constants/colors.dart';
 import '../constants/fontsize.dart';
@@ -22,21 +23,7 @@ class BioDesktop extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 80.0),
               child: Stack(children: [
-                Column(
-                  children: [
-                    Text(
-                      'Patrycja Kołodziejska',
-                      style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          fontSize: standardfontsize),
-                    ),
-                    SizedBox(height: 15),
-                    Text(
-                      TextEn.patrycjaBio,
-                      style: TextStyle(fontSize: standardfontsize),
-                    )
-                  ],
-                ),
+                BioBuilder(name: 'Patrycja Kołodziejska', bio: TextEn.patrycjaBio),
                 HoverImage(
                   imagePath: 'assets/images/Pati3d.png',
                   height: 500,
@@ -62,21 +49,7 @@ class BioDesktop extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 80.0),
               child: Stack(children: [
-                Column(
-                  children: [
-                    Text(
-                      'Włodzimierz Żukowski',
-                      style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          fontSize: standardfontsize),
-                    ),
-                    SizedBox(height: 15),
-                    Text(
-                      TextEn.wlodekBio,
-                      style: TextStyle(fontSize: standardfontsize),
-                    )
-                  ],
-                ),
+                BioBuilder(name: 'Włodzimierz Żukowski', bio: TextEn.wlodekBio),
                 HoverImage(
                   imagePath: 'assets/images/Wlodek3d.png',
                   height: 500,
