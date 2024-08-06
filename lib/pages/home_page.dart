@@ -11,6 +11,8 @@ import 'package:soundscapewalks/widgets/video_widget.dart';
 import 'package:easy_web_view/easy_web_view.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 
+import '../constants/text_en.dart';
+
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
 
@@ -56,7 +58,7 @@ class _HomepageState extends State<Homepage> {
                 child: Padding(
                   padding: const EdgeInsets.all(70.0),
                   child: Text(
-                      '"Soundscapewalks" to utwór stworzony przez Patrycję Kołodziejską, Włodzimierza Żukowskiego oraz Bartosza Gardzińskiego, zakładający współpracę studentów z Wydziału Kompozycji i Teorii Muzyki oraz Wydziału Reżyserii Dźwięku. Głównym założeniem jest głęboka eksploracja dźwiękowej tożsamości Warszawy, zagłębienie się w akustyczny materiał genetyczny miasta, który buduje rzeczywistość wokół mieszkańców poprzez uchwycenie dźwięków tła, pozornie niezauważalnych, a które faktycznie determinują przestrzeń, będącą w ciągłej koegzystencji z dwoma milionami ludzi.',
+                      TextEn.aboutSection,
                       style: TextStyle(fontSize: standardfontsize)),
                 ),
               ),
