@@ -1,8 +1,10 @@
+import 'package:expand_widget/expand_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:soundscapewalks/constants/colors.dart';
 import 'package:soundscapewalks/constants/fontsize.dart';
 import 'package:soundscapewalks/constants/padding.dart';
 import 'package:soundscapewalks/constants/size.dart';
+import 'package:soundscapewalks/constants/timeline_pl.dart';
 import 'package:soundscapewalks/widgets/bio_desktop.dart';
 import 'package:soundscapewalks/widgets/drawer_mobile.dart';
 import 'package:soundscapewalks/widgets/header_desktop.dart';
@@ -57,8 +59,7 @@ class _HomepageState extends State<Homepage> {
               Container(
                 child: Padding(
                   padding: const EdgeInsets.all(70.0),
-                  child: Text(
-                      TextEn.aboutSection,
+                  child: Text(TextEn.aboutSection,
                       style: TextStyle(fontSize: standardfontsize)),
                 ),
               ),
@@ -70,8 +71,32 @@ class _HomepageState extends State<Homepage> {
               ),
               Container(
                 width: double.maxFinite,
-                height: 700,
-                color: CustomColor.redPrimary,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    for (var i = 0; i < kTimelinePL.length; i++)
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(right: 20),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [Text(kTimelinePL[i][0], style: TextStyle(fontSize: 70, fontWeight: FontWeight.w200),), Text(kTimelinePL[i][1], style: TextStyle(fontSize: standardfontsize),)],
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.fromLTRB(20, 100, 70, 0),
+                                child: ExpandText(kTimelinePL[i][2], style: TextStyle(fontSize: standardfontsize),),
+                              ))
+                        ],
+                      ),
+                  ],
+                ),
               ),
               //MAP
               SizedBox(
@@ -93,10 +118,12 @@ class _HomepageState extends State<Homepage> {
               Align(
                   alignment: Alignment.bottomRight,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 80.0),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 15.0, horizontal: 80.0),
                     child: Text(
                       'SOUNDSCAPEWALKS',
-                      style: TextStyle(fontWeight: FontWeight.w200, fontSize: 30),
+                      style:
+                          TextStyle(fontWeight: FontWeight.w200, fontSize: 30),
                     ),
                   ))
             ],

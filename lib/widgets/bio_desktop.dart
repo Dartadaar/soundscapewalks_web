@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:soundscapewalks/widgets/bio_builder.dart';
 
 import '../constants/colors.dart';
-import '../constants/fontsize.dart';
 import '../constants/text_en.dart';
 import 'hover_image.dart';
 
