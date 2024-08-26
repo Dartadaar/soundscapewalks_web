@@ -24,6 +24,17 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+void _toggleLanguage() {
+    setState(() {
+      if (PageLanguage.current == Language.english) {
+        PageLanguage.setLanguage(Language.polish);
+      } else {
+        PageLanguage.setLanguage(Language.english);
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
@@ -47,7 +58,7 @@ class _HomepageState extends State<Homepage> {
                       Padding(
                           padding: EdgeInsets.all(standardPadding),
                           child: constraints.maxWidth > kMinDesktopWidth
-                              ? HeaderDesktop(onLanguageSwitch: () {},)
+                              ? HeaderDesktop(onLanguageSwitch: _toggleLanguage,)
                               : HeaderMobile(onMenuTap: () {
                                   scaffoldKey.currentState?.openEndDrawer();
                                 })),
