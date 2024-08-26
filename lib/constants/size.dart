@@ -1,1 +1,1 @@
-const int kMinDesktopWidth = 600;
+const int kMinDesktopWidth = 690;
