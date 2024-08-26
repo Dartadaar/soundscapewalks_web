@@ -33,7 +33,7 @@ class PageLanguage {
       case Language.polish:
         return _plText[fieldName] ?? '';
       default:
-        return '';
+        return 'translation error';
     }
   }
 }
