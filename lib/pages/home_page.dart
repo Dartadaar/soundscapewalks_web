@@ -65,8 +65,10 @@ void _toggleLanguage() {
                                 })),
                       Center(
                           child: Text('SOUNDSCAPEWALKS',
-                              style: TextStyle(
-                                  fontSize: 70, fontWeight: FontWeight.w200)))
+                              style: constraints.maxWidth > kMinDesktopWidth ? TextStyle(
+                                  fontSize: 70, fontWeight: FontWeight.w200) : TextStyle(
+                                      fontSize: 45,
+                                      fontWeight: FontWeight.w200)))
                     ],
                   )),
               //description
