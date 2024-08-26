@@ -41,7 +41,9 @@ class _HomepageState extends State<Homepage> {
                   width: double.maxFinite,
                   child: Stack(
                     children: [
-                      constraints.maxWidth > kMinDesktopWidth ? const VideoApp() : const PhotoApp(),
+                      constraints.maxWidth > kMinDesktopWidth
+                          ? const VideoApp()
+                          : const PhotoApp(),
                       Padding(
                           padding: EdgeInsets.all(standardPadding),
                           child: constraints.maxWidth > kMinDesktopWidth
@@ -84,15 +86,31 @@ class _HomepageState extends State<Homepage> {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.end,
-                                children: [Text(kTimelinePL[i][0], style: TextStyle(fontSize: 70, fontWeight: FontWeight.w200),), Text(kTimelinePL[i][1], style: TextStyle(fontSize: standardfontsize),)],
+                                children: [
+                                  Text(
+                                    kTimelinePL[i][0],
+                                    style: TextStyle(
+                                        fontSize: 70,
+                                        fontWeight: FontWeight.w200),
+                                  ),
+                                  Text(
+                                    kTimelinePL[i][1],
+                                    style:
+                                        TextStyle(fontSize: standardfontsize),
+                                  )
+                                ],
                               ),
                             ),
                           ),
                           Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.fromLTRB(20, 100, 70, 0),
-                                child: ExpandText(kTimelinePL[i][2], style: TextStyle(fontSize: standardfontsize), maxLines: 3,),
-                              ))
+                            padding: const EdgeInsets.fromLTRB(20, 100, 70, 0),
+                            child: ExpandText(
+                              kTimelinePL[i][2],
+                              style: TextStyle(fontSize: standardfontsize),
+                              maxLines: 3,
+                            ),
+                          ))
                         ],
                       ),
                   ],
