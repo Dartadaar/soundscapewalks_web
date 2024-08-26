@@ -9,7 +9,8 @@ import 'package:soundscapewalks/widgets/bio_desktop.dart';
 import 'package:soundscapewalks/widgets/drawer_mobile.dart';
 import 'package:soundscapewalks/widgets/header_desktop.dart';
 import 'package:soundscapewalks/widgets/header_mobile.dart';
-import 'package:soundscapewalks/widgets/video_widget.dart';
+import 'package:soundscapewalks/widgets/photo_app.dart';
+import 'package:soundscapewalks/widgets/video_app.dart';
 import 'package:easy_web_view/easy_web_view.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 
@@ -41,7 +42,7 @@ class _HomepageState extends State<Homepage> {
                   width: double.maxFinite,
                   child: Stack(
                     children: [
-                      VideoApp(),
+                      constraints.maxWidth > kMinDesktopWidth ? const VideoApp() : const PhotoApp(),
                       Padding(
                           padding: EdgeInsets.all(standardPadding),
                           child: constraints.maxWidth > kMinDesktopWidth
