@@ -92,7 +92,7 @@ class _HomepageState extends State<Homepage> {
                           Expanded(
                               child: Padding(
                                 padding: const EdgeInsets.fromLTRB(20, 100, 70, 0),
-                                child: ExpandText(kTimelinePL[i][2], style: TextStyle(fontSize: standardfontsize),),
+                                child: ExpandText(kTimelinePL[i][2], style: TextStyle(fontSize: standardfontsize), maxLines: 3,),
                               ))
                         ],
                       ),
