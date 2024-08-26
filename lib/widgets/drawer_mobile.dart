@@ -31,7 +31,7 @@ class DrawerMobile extends StatelessWidget {
               Spacer(),
               Align(
                 alignment: Alignment.bottomRight,
-                child: TextButton(onPressed: () {}, child: Text('PL', style: TextStyle(color: CustomColor.redPrimary),))
+                child: TextButton(onPressed: () {}, child: Text('PL', style: TextStyle(color: CustomColor.whitePrimary),))
                 )
             ],
           ),

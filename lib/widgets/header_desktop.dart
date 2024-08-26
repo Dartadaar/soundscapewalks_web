@@ -31,7 +31,7 @@ class HeaderDesktop extends StatelessWidget {
             onPressed: onLanguageSwitch,
             child: Text(
               PageLanguage.current == Language.english ? 'PL' : 'EN',
-              style: const TextStyle(fontSize: standardfontsize),
+              style: const TextStyle(color: CustomColor.whitePrimary,fontSize: standardfontsize),
             ))
       ],
     );
