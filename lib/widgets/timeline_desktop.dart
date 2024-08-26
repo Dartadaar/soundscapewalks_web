@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import '../constants/fontsize.dart';
 import '../constants/timeline_pl.dart';
 
-class timelineDesktop extends StatelessWidget {
-  const timelineDesktop({
+class TimelineDesktop extends StatelessWidget {
+  const TimelineDesktop({
     super.key,
   });
 

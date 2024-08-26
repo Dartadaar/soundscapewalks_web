@@ -81,7 +81,7 @@ void _toggleLanguage() {
                 thickness: 2,
                 color: CustomColor.whitePrimary,
               ),
-              timelineDesktop(),
+              TimelineDesktop(),
               //MAP
               SizedBox(
                 width: double.maxFinite,
