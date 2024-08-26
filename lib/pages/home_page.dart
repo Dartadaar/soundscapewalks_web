@@ -47,7 +47,7 @@ class _HomepageState extends State<Homepage> {
                       Padding(
                           padding: EdgeInsets.all(standardPadding),
                           child: constraints.maxWidth > kMinDesktopWidth
-                              ? HeaderDesktop()
+                              ? HeaderDesktop(onLanguageSwitch: () {},)
                               : HeaderMobile(onMenuTap: () {
                                   scaffoldKey.currentState?.openEndDrawer();
                                 })),
