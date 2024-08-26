@@ -13,8 +13,7 @@ import 'package:soundscapewalks/widgets/photo_app.dart';
 import 'package:soundscapewalks/widgets/video_app.dart';
 import 'package:easy_web_view/easy_web_view.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
-
-import '../constants/text_en.dart';
+import '../widgets/page_language.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -60,7 +59,7 @@ class _HomepageState extends State<Homepage> {
               Container(
                 child: Padding(
                   padding: const EdgeInsets.all(70.0),
-                  child: Text(TextEn.aboutSection,
+                  child: Text(PageLanguage.text('aboutSection'),
                       style: TextStyle(fontSize: standardfontsize)),
                 ),
               ),
