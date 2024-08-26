@@ -4,6 +4,7 @@ import 'package:soundscapewalks/constants/fontsize.dart';
 import 'package:soundscapewalks/constants/padding.dart';
 import 'package:soundscapewalks/constants/size.dart';
 import 'package:soundscapewalks/widgets/bio_desktop.dart';
+import 'package:soundscapewalks/widgets/bio_mobile.dart';
 import 'package:soundscapewalks/widgets/drawer_mobile.dart';
 import 'package:soundscapewalks/widgets/header_desktop.dart';
 import 'package:soundscapewalks/widgets/header_mobile.dart';
@@ -93,7 +94,7 @@ void _toggleLanguage() {
                 ]),
               ),
               //BIO
-              BioDesktop(),
+              constraints.maxWidth > kMinDesktopWidth ? const BioDesktop() : const BioMobile(),
               //FOOTER
               Divider(
                 height: 0,
