@@ -1,10 +1,8 @@
-import 'package:expand_widget/expand_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:soundscapewalks/constants/colors.dart';
 import 'package:soundscapewalks/constants/fontsize.dart';
 import 'package:soundscapewalks/constants/padding.dart';
 import 'package:soundscapewalks/constants/size.dart';
-import 'package:soundscapewalks/constants/timeline_pl.dart';
 import 'package:soundscapewalks/widgets/bio_desktop.dart';
 import 'package:soundscapewalks/widgets/drawer_mobile.dart';
 import 'package:soundscapewalks/widgets/header_desktop.dart';
@@ -14,6 +12,7 @@ import 'package:soundscapewalks/widgets/video_app.dart';
 import 'package:easy_web_view/easy_web_view.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 import '../widgets/page_language.dart';
+import '../widgets/timeline_desktop.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -82,51 +81,7 @@ void _toggleLanguage() {
                 thickness: 2,
                 color: CustomColor.whitePrimary,
               ),
-              Container(
-                width: double.maxFinite,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    for (var i = 0; i < kTimelinePL.length; i++)
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.only(right: 20),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                children: [
-                                  Text(
-                                    kTimelinePL[i][0],
-                                    style: TextStyle(
-                                        fontSize: 70,
-                                        fontWeight: FontWeight.w200),
-                                  ),
-                                  Text(
-                                    kTimelinePL[i][1],
-                                    style:
-                                        TextStyle(fontSize: standardfontsize),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                              child: Padding(
-                            padding: const EdgeInsets.fromLTRB(20, 100, 70, 0),
-                            child: ExpandText(
-                              kTimelinePL[i][2],
-                              style: TextStyle(fontSize: standardfontsize),
-                              maxLines: 3,
-                            ),
-                          ))
-                        ],
-                      ),
-                  ],
-                ),
-              ),
+              timelineDesktop(),
               //MAP
               SizedBox(
                 width: double.maxFinite,
@@ -160,3 +115,4 @@ void _toggleLanguage() {
     });
   }
 }
+
