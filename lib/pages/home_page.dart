@@ -13,6 +13,7 @@ import 'package:easy_web_view/easy_web_view.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 import '../widgets/page_language.dart';
 import '../widgets/timeline_desktop.dart';
+import '../widgets/timeline_mobile.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -81,7 +82,7 @@ void _toggleLanguage() {
                 thickness: 2,
                 color: CustomColor.whitePrimary,
               ),
-              TimelineDesktop(),
+              constraints.maxWidth > kMinDesktopWidth ? TimelineDesktop() : TimelineMobile(),
               //MAP
               SizedBox(
                 width: double.maxFinite,
